@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Medicamento" representedClassName="Medicamento" syncable="YES" codeGenerationType="class">
+        <attribute name="categoria" optional="YES" attributeType="String"/>
+        <attribute name="descricao" optional="YES" attributeType="String"/>
+        <attribute name="dose" optional="YES" attributeType="String"/>
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <attribute name="nomeIcone" optional="YES" attributeType="String"/>
+        <attribute name="quantidadeAtual" optional="YES" attributeType="String"/>
+        <attribute name="quantidadeMaxima" optional="YES" attributeType="String"/>
+        <attribute name="validade" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="PrimeiraVez" representedClassName="PrimeiraVez" syncable="YES" codeGenerationType="class">
+        <attribute name="firstTime" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+</model>

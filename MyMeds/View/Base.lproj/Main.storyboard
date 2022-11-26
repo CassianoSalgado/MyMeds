@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8h4-Vj-me4">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About View Controller-->
+        <scene sceneID="z8E-mn-SzW">
+            <objects>
+                <viewController storyboardIdentifier="about" id="Ndb-AN-z0M" customClass="AboutViewController" customModule="MyMeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uAY-PY-aba">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xx-kq-OkY" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                <rect key="frame" x="32" y="59" width="113" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rd-k5-7kd">
+                                        <rect key="frame" x="27" y="17" width="59" height="20"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Volta para a tela inicial" label="Voltar">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstItem="3Rd-k5-7kd" firstAttribute="centerY" secondItem="1xx-kq-OkY" secondAttribute="centerY" id="Sgi-wW-mQw"/>
+                                    <constraint firstAttribute="width" constant="113" id="UtD-EX-qpL"/>
+                                    <constraint firstAttribute="height" constant="54" id="a3z-zE-ZQY"/>
+                                    <constraint firstItem="3Rd-k5-7kd" firstAttribute="centerX" secondItem="1xx-kq-OkY" secondAttribute="centerX" id="uIq-gL-cj0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="goBackToMain:" destination="Ndb-AN-z0M" eventType="touchUpInside" id="sMK-hb-mpv"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Cassiano C. S." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gw-OF-hZM">
+                                <rect key="frame" x="20" y="233" width="390" height="25"/>
+                                <accessibility key="accessibilityConfiguration" hint="Mostra a versão atual do aplicativo" label="Versão"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <color key="textColor" red="0.26822733879999999" green="0.44186389450000002" blue="0.65100497010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versão: 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMl-PF-f3A">
+                                <rect key="frame" x="20" y="171" width="390" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Mostra a versão atual do aplicativo" label="Versão"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <color key="textColor" red="0.26822733879999999" green="0.44186389450000002" blue="0.65100497010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published by Luminos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpJ-HM-llV">
+                                <rect key="frame" x="20" y="294" width="390" height="25"/>
+                                <accessibility key="accessibilityConfiguration" hint="Mostra a versão atual do aplicativo" label="Versão"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <color key="textColor" red="0.26822733879999999" green="0.44186389450000002" blue="0.65100497010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DcK-5u-dRc"/>
+                        <color key="backgroundColor" red="0.9766148925" green="1" blue="0.9960783124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Gw-OF-hZM" secondAttribute="trailing" constant="20" id="09W-EP-UWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="hpJ-HM-llV" secondAttribute="trailing" constant="20" id="9it-wt-bKR"/>
+                            <constraint firstItem="8Gw-OF-hZM" firstAttribute="leading" secondItem="uAY-PY-aba" secondAttribute="leading" constant="20" id="LWc-Zn-G4I"/>
+                            <constraint firstItem="8Gw-OF-hZM" firstAttribute="top" secondItem="SMl-PF-f3A" secondAttribute="bottom" constant="32" id="NFz-8x-Bbv"/>
+                            <constraint firstItem="SMl-PF-f3A" firstAttribute="top" secondItem="uAY-PY-aba" secondAttribute="top" constant="171" id="OJp-xu-ttL"/>
+                            <constraint firstItem="1xx-kq-OkY" firstAttribute="top" secondItem="DcK-5u-dRc" secondAttribute="top" id="PJN-4U-Rm0"/>
+                            <constraint firstItem="hpJ-HM-llV" firstAttribute="leading" secondItem="uAY-PY-aba" secondAttribute="leading" constant="20" id="eMi-UC-HLW"/>
+                            <constraint firstItem="SMl-PF-f3A" firstAttribute="leading" secondItem="uAY-PY-aba" secondAttribute="leadingMargin" id="peJ-0J-J1L"/>
+                            <constraint firstItem="SMl-PF-f3A" firstAttribute="trailing" secondItem="uAY-PY-aba" secondAttribute="trailingMargin" id="qOk-D9-oL6"/>
+                            <constraint firstItem="1xx-kq-OkY" firstAttribute="leading" secondItem="uAY-PY-aba" secondAttribute="leadingMargin" constant="12" id="yUB-Yg-goi"/>
+                            <constraint firstItem="hpJ-HM-llV" firstAttribute="top" secondItem="8Gw-OF-hZM" secondAttribute="bottom" constant="36" id="ybd-77-d1D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goBack" destination="1xx-kq-OkY" id="TWy-FW-h5w"/>
+                        <outlet property="versionLabel" destination="SMl-PF-f3A" id="Clo-tz-kml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zs8-z3-7JP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572.5581395348836" y="721.67381974248929"/>
+        </scene>
+        <!--Config View Controller-->
+        <scene sceneID="gap-vi-cIk">
+            <objects>
+                <viewController storyboardIdentifier="Config" id="Mt5-dd-UyT" customClass="ConfigViewController" customModule="MyMeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4U-ah-W3f">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-7z-Ahu" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                <rect key="frame" x="32" y="59" width="113" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pr-Ex-isy">
+                                        <rect key="frame" x="27" y="17" width="59" height="20"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Volta para a tela inicial" label="Voltar">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="R6A-iF-mPf"/>
+                                    <constraint firstAttribute="height" constant="54" id="bog-xg-cxh"/>
+                                    <constraint firstItem="5pr-Ex-isy" firstAttribute="centerY" secondItem="kHO-7z-Ahu" secondAttribute="centerY" id="sOb-I2-acC"/>
+                                    <constraint firstItem="5pr-Ex-isy" firstAttribute="centerX" secondItem="kHO-7z-Ahu" secondAttribute="centerX" id="y8x-Oh-qoZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="goBack:" destination="Mt5-dd-UyT" eventType="touchUpInside" id="rRP-fJ-pbt"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-Mu-mse" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                <rect key="frame" x="95" y="424" width="240" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deletar Todos os Medicamentos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMN-cp-fVo">
+                                        <rect key="frame" x="8" y="21.666666666666686" width="224" height="42"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Deleta todos os medicamentos cadastrados" label="Deletar medicamentos">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="2Pn-vB-oSt"/>
+                                    <constraint firstAttribute="height" constant="85" id="7TX-gZ-o7e"/>
+                                    <constraint firstItem="KMN-cp-fVo" firstAttribute="centerY" secondItem="KCK-Mu-mse" secondAttribute="centerY" id="Cik-uS-E37"/>
+                                    <constraint firstItem="KMN-cp-fVo" firstAttribute="leading" secondItem="KCK-Mu-mse" secondAttribute="leading" constant="8" id="Ink-rn-Ngf"/>
+                                    <constraint firstAttribute="trailing" secondItem="KMN-cp-fVo" secondAttribute="trailing" constant="8" id="QQA-GI-ny2"/>
+                                    <constraint firstAttribute="width" constant="240" id="RaK-ro-bV5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="kvF-z0-0eX"/>
+                                    <constraint firstItem="KMN-cp-fVo" firstAttribute="centerX" secondItem="KCK-Mu-mse" secondAttribute="centerX" id="xY5-gh-CvZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="deleteAll:" destination="Mt5-dd-UyT" eventType="touchUpInside" id="ud9-T3-eHO"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zLz-QM-JBo"/>
+                        <color key="backgroundColor" red="0.9766148925" green="1" blue="0.9960783124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KCK-Mu-mse" secondAttribute="trailing" constant="75" id="T5Q-TQ-0SB"/>
+                            <constraint firstItem="KCK-Mu-mse" firstAttribute="top" secondItem="B4U-ah-W3f" secondAttribute="topMargin" constant="365" id="csR-1v-nrX"/>
+                            <constraint firstItem="KCK-Mu-mse" firstAttribute="centerX" secondItem="B4U-ah-W3f" secondAttribute="centerX" id="h9u-q6-Z2C"/>
+                            <constraint firstItem="kHO-7z-Ahu" firstAttribute="top" secondItem="B4U-ah-W3f" secondAttribute="topMargin" id="hwo-Fz-7Vr"/>
+                            <constraint firstItem="kHO-7z-Ahu" firstAttribute="leading" secondItem="B4U-ah-W3f" secondAttribute="leadingMargin" constant="12" id="r3g-4Y-AJw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deletaMeds" destination="KCK-Mu-mse" id="xpK-7G-8Ar"/>
+                        <outlet property="goBackConfig" destination="kHO-7z-Ahu" id="q8I-V1-ZWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueh-xQ-91t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906.97674418604652" y="721.67381974248929"/>
+        </scene>
+        <!--Onboard View Controller-->
+        <scene sceneID="cYt-k1-fAt">
+            <objects>
+                <viewController storyboardIdentifier="Intro" id="8h4-Vj-me4" customClass="OnboardViewController" customModule="MyMeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qAe-Gx-ysc">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IdM-7d-Ijm"/>
+                        <color key="backgroundColor" red="0.9766148925" green="1" blue="0.9960783124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wog-V5-Hxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="70"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Inic" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="MyMeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6YB-oA-mhd" customClass="SoftView" customModule="MyMeds" customModuleProvider="target">
+                                <rect key="frame" x="26.666666666666657" y="113" width="376.66666666666674" height="164"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="pUW-iI-9vh">
+                                        <rect key="frame" x="57.333333333333343" y="37" width="262.33333333333326" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W53-kL-2SG">
+                                                <rect key="frame" x="0.0" y="0.0" width="262.33333333333331" height="90"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Horário atual" label="Horas"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="90"/>
+                                                <color key="textColor" red="0.26666666666666666" green="0.44313725490196076" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pUW-iI-9vh" firstAttribute="centerX" secondItem="6YB-oA-mhd" secondAttribute="centerX" id="19L-nD-Ic6"/>
+                                    <constraint firstItem="pUW-iI-9vh" firstAttribute="top" secondItem="6YB-oA-mhd" secondAttribute="top" constant="37" id="L0g-qo-06T"/>
+                                    <constraint firstItem="pUW-iI-9vh" firstAttribute="centerY" secondItem="6YB-oA-mhd" secondAttribute="centerY" id="jUZ-SD-MWk"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="ezT-rd-Az6">
+                                <rect key="frame" x="66" y="440" width="298" height="356"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e78-ly-9LC" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="298" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamentos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ky-La-f5s">
+                                                <rect key="frame" x="78.000000000000014" y="35" width="142.33333333333337" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Vai para a tela de medicamentos" label="Medicamentos">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="5Ky-La-f5s" firstAttribute="top" secondItem="e78-ly-9LC" secondAttribute="top" constant="35" id="97G-Bb-ccY"/>
+                                            <constraint firstItem="5Ky-La-f5s" firstAttribute="centerY" secondItem="e78-ly-9LC" secondAttribute="centerY" id="eMe-0M-lrz"/>
+                                            <constraint firstItem="5Ky-La-f5s" firstAttribute="centerX" secondItem="e78-ly-9LC" secondAttribute="centerX" id="u4O-RG-rIZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="goToMedsFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9h4-hp-YfH"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJD-zL-Y13" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="133" width="298" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configurações" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWe-XZ-4c5">
+                                                <rect key="frame" x="78.333333333333329" y="35" width="141.33333333333337" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Vai para a tela de configurações" label="Configurações">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="RWe-XZ-4c5" firstAttribute="centerX" secondItem="UJD-zL-Y13" secondAttribute="centerX" id="R4x-qx-j8n"/>
+                                            <constraint firstItem="RWe-XZ-4c5" firstAttribute="centerY" secondItem="UJD-zL-Y13" secondAttribute="centerY" id="W3h-xE-spX"/>
+                                            <constraint firstItem="RWe-XZ-4c5" firstAttribute="top" secondItem="UJD-zL-Y13" secondAttribute="top" constant="35" id="kab-do-OvT"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="goToConfigFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HP3-bf-yhM"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIx-AV-52v" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="266" width="298" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-16-LX6">
+                                                <rect key="frame" x="119.99999999999999" y="35" width="58.333333333333329" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Vai para a tela de informações sobr o aplicativo" label="Sobre">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="bgr-16-LX6" firstAttribute="top" secondItem="tIx-AV-52v" secondAttribute="top" constant="35" id="KJU-0C-Nbd"/>
+                                            <constraint firstItem="bgr-16-LX6" firstAttribute="centerY" secondItem="tIx-AV-52v" secondAttribute="centerY" id="SPP-Iz-yNu"/>
+                                            <constraint firstItem="bgr-16-LX6" firstAttribute="centerX" secondItem="tIx-AV-52v" secondAttribute="centerX" id="gxl-KL-abC"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="goToAbout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDE-tZ-ldd"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6YB-oA-mhd" secondAttribute="trailing" constant="26.670000000000002" id="0Py-jZ-OQC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ezT-rd-Az6" secondAttribute="bottom" constant="102" id="9uO-D8-h9m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ezT-rd-Az6" secondAttribute="trailing" constant="46" id="Du8-Th-yQ8"/>
+                            <constraint firstItem="6YB-oA-mhd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26.670000000000002" id="GHS-Ik-OZI"/>
+                            <constraint firstItem="ezT-rd-Az6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="Ugz-60-Vww"/>
+                            <constraint firstItem="6YB-oA-mhd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="54" id="e1V-9z-MND"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="t91-4r-NDw"/>
+                    <navigationItem key="navigationItem" id="g9t-du-2C0"/>
+                    <connections>
+                        <outlet property="goToConfig" destination="UJD-zL-Y13" id="Bpx-vZ-rI5"/>
+                        <outlet property="goToMeds" destination="e78-ly-9LC" id="jCk-eD-7bm"/>
+                        <outlet property="goToSobre" destination="tIx-AV-52v" id="Yc5-k6-M6X"/>
+                        <outlet property="timeDisplay" destination="6YB-oA-mhd" id="DYL-sD-krq"/>
+                        <outlet property="timeLable" destination="W53-kL-2SG" id="lcw-u8-f6N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1qX-oE-wjf"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="70"/>
+        </scene>
+        <!--Meds Table View Controller-->
+        <scene sceneID="y8W-Ky-DeV">
+            <objects>
+                <tableViewController storyboardIdentifier="Meds" id="jMJ-1r-ldi" customClass="MedsTableViewController" customModule="MyMeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="z2Q-rg-X4r">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97272259000000005" green="1" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="oLa-3c-Nau">
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="152"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P14-8f-x9b" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                    <rect key="frame" x="32" y="34" width="113" height="54"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIS-en-9p7">
+                                            <rect key="frame" x="27" y="17" width="59" height="20"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <accessibility key="accessibilityConfiguration" hint="Volta para a tela inicial" label="Voltar">
+                                        <bool key="isElement" value="YES"/>
+                                    </accessibility>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="113" id="8Fb-Ah-Km4"/>
+                                        <constraint firstAttribute="height" constant="54" id="Edk-4k-0m5"/>
+                                        <constraint firstItem="YIS-en-9p7" firstAttribute="centerY" secondItem="P14-8f-x9b" secondAttribute="centerY" id="mCP-i2-0jF"/>
+                                        <constraint firstItem="YIS-en-9p7" firstAttribute="centerX" secondItem="P14-8f-x9b" secondAttribute="centerX" id="vRR-1a-gA8"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="goBackMedsTBVFunc:" destination="jMJ-1r-ldi" eventType="touchUpInside" id="ytL-lc-g8k"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBc-TU-YHc" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                    <rect key="frame" x="285" y="34" width="113" height="54"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plus.square.on.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-r3-nYl">
+                                            <rect key="frame" x="42.666666666666686" y="14.333333333333332" width="28" height="26.000000000000011"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <accessibility key="accessibilityConfiguration" hint="Vai para a tela onde se adicionam os medicamentos" label="Adicionar">
+                                        <bool key="isElement" value="YES"/>
+                                    </accessibility>
+                                    <constraints>
+                                        <constraint firstItem="Wy8-r3-nYl" firstAttribute="centerX" secondItem="qBc-TU-YHc" secondAttribute="centerX" id="Szz-UO-8gS"/>
+                                        <constraint firstAttribute="height" constant="54" id="VHz-D8-Y0f"/>
+                                        <constraint firstAttribute="width" constant="113" id="f70-oK-Kmh"/>
+                                        <constraint firstItem="Wy8-r3-nYl" firstAttribute="centerY" secondItem="qBc-TU-YHc" secondAttribute="centerY" id="u8U-bA-eW1"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="newMedsTBVFunc:" destination="jMJ-1r-ldi" eventType="touchUpInside" id="JXV-4C-SIm"/>
+                                    </connections>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pesquisar remédio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkJ-2p-cwh">
+                                    <rect key="frame" x="32" y="110" width="366" height="34"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="searching:" destination="jMJ-1r-ldi" eventType="editingChanged" id="lHK-qa-R4e"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="nkJ-2p-cwh" secondAttribute="trailing" constant="32" id="3BX-Y1-HUb"/>
+                                <constraint firstAttribute="trailing" secondItem="qBc-TU-YHc" secondAttribute="trailing" constant="32" id="8G5-NF-V0G"/>
+                                <constraint firstItem="P14-8f-x9b" firstAttribute="top" secondItem="oLa-3c-Nau" secondAttribute="top" constant="34" id="8Xb-Bc-shv"/>
+                                <constraint firstItem="qBc-TU-YHc" firstAttribute="top" secondItem="oLa-3c-Nau" secondAttribute="top" constant="34" id="HfF-F4-it6"/>
+                                <constraint firstItem="P14-8f-x9b" firstAttribute="leading" secondItem="oLa-3c-Nau" secondAttribute="leading" constant="32" id="Icy-hy-Lta"/>
+                                <constraint firstItem="nkJ-2p-cwh" firstAttribute="leading" secondItem="oLa-3c-Nau" secondAttribute="leading" constant="32" id="kc3-4r-tyD"/>
+                                <constraint firstAttribute="bottom" secondItem="nkJ-2p-cwh" secondAttribute="bottom" constant="8" id="qtM-aa-Rtx"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedTCell" rowHeight="266" id="EFR-tH-pNo" customClass="MedInformation" customModule="MyMeds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="202" width="430" height="266"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EFR-tH-pNo" id="CZV-SA-4uf">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="266"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFu-jA-DY1" customClass="SoftView" customModule="MyMeds" customModuleProvider="target">
+                                            <rect key="frame" x="37" y="21" width="356" height="224"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhP-Vx-r8Z" customClass="SoftView" customModule="MyMeds" customModuleProvider="target">
+                                                    <rect key="frame" x="9" y="106" width="250" height="110"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Val. - Jan/23" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZ2-Ge-H7W">
+                                                            <rect key="frame" x="8" y="54" width="234" height="50"/>
+                                                            <accessibility key="accessibilityConfiguration" label="Validade"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="kgb-4G-UP3"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Qnt. - 05/20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM4-eC-TAp">
+                                                            <rect key="frame" x="8" y="10" width="234" height="50"/>
+                                                            <accessibility key="accessibilityConfiguration" label="Quantidade"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="vGA-pZ-DGm"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="1Oj-Z3-oge"/>
+                                                        <constraint firstItem="QM4-eC-TAp" firstAttribute="centerX" secondItem="WhP-Vx-r8Z" secondAttribute="centerX" id="ArU-im-KZ4"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zZ2-Ge-H7W" secondAttribute="trailing" id="BSe-fj-icj"/>
+                                                        <constraint firstItem="QM4-eC-TAp" firstAttribute="leading" secondItem="WhP-Vx-r8Z" secondAttribute="leading" constant="8" id="Bte-7R-Dx4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zZ2-Ge-H7W" secondAttribute="trailing" constant="8" id="BuF-EE-win"/>
+                                                        <constraint firstItem="zZ2-Ge-H7W" firstAttribute="top" secondItem="WhP-Vx-r8Z" secondAttribute="top" constant="54" id="FnP-o1-nva"/>
+                                                        <constraint firstItem="QM4-eC-TAp" firstAttribute="top" secondItem="WhP-Vx-r8Z" secondAttribute="top" constant="10" id="Tch-SH-u1d"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QM4-eC-TAp" secondAttribute="trailing" constant="8" id="WlC-oX-h4e"/>
+                                                        <constraint firstItem="zZ2-Ge-H7W" firstAttribute="centerX" secondItem="WhP-Vx-r8Z" secondAttribute="centerX" id="kcp-S4-rKZ"/>
+                                                        <constraint firstItem="zZ2-Ge-H7W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WhP-Vx-r8Z" secondAttribute="leading" id="pVA-vC-Dg4"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paracetamol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG7-Am-GWk">
+                                                    <rect key="frame" x="9" y="18" width="338" height="31"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Nome"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="NSq-Zi-Cby"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analgésico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC2-y1-GyB">
+                                                    <rect key="frame" x="9" y="58" width="338" height="31"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Categoria"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="sst-rq-2XC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9M-Zl-oNL">
+                                                    <rect key="frame" x="49" y="52" width="258" height="3"/>
+                                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="3" id="G7S-aI-DvV"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yP5-SW-HkY" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                                    <rect key="frame" x="267" y="121" width="80" height="80"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISd-dV-2Jl">
+                                                            <rect key="frame" x="9" y="30" width="62" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                            <color key="textColor" red="0.074509803921568626" green="0.28627450980392155" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.26666666666666666" green="0.44313725490196076" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="KCM-ts-Sv5"/>
+                                                        <constraint firstItem="ISd-dV-2Jl" firstAttribute="centerX" secondItem="yP5-SW-HkY" secondAttribute="centerX" id="Qnx-Oq-anp"/>
+                                                        <constraint firstItem="ISd-dV-2Jl" firstAttribute="centerY" secondItem="yP5-SW-HkY" secondAttribute="centerY" id="oIa-eJ-A3p"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="buttonAction:" destination="EFR-tH-pNo" eventType="touchUpInside" id="bSd-zr-tCJ"/>
+                                                    </connections>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="WhP-Vx-r8Z" firstAttribute="leading" secondItem="tFu-jA-DY1" secondAttribute="leading" constant="9" id="6A0-em-V53"/>
+                                                <constraint firstAttribute="height" constant="224" id="A6d-fb-rLm"/>
+                                                <constraint firstAttribute="trailing" secondItem="IG7-Am-GWk" secondAttribute="trailing" constant="9" id="Br5-BB-O7i"/>
+                                                <constraint firstItem="WhP-Vx-r8Z" firstAttribute="top" secondItem="SC2-y1-GyB" secondAttribute="bottom" constant="17" id="DPf-nt-tCU"/>
+                                                <constraint firstAttribute="trailing" secondItem="SC2-y1-GyB" secondAttribute="trailing" constant="9" id="Erc-9z-sit"/>
+                                                <constraint firstItem="IG7-Am-GWk" firstAttribute="top" secondItem="tFu-jA-DY1" secondAttribute="top" constant="18" id="Hjd-Zx-bnn"/>
+                                                <constraint firstItem="yP5-SW-HkY" firstAttribute="leading" secondItem="WhP-Vx-r8Z" secondAttribute="trailing" constant="8" id="Jgh-9D-jbQ"/>
+                                                <constraint firstItem="yP5-SW-HkY" firstAttribute="top" secondItem="SC2-y1-GyB" secondAttribute="bottom" constant="32" id="P09-33-nTx"/>
+                                                <constraint firstItem="y9M-Zl-oNL" firstAttribute="leading" secondItem="tFu-jA-DY1" secondAttribute="leading" constant="49" id="Q5s-VL-Kfj"/>
+                                                <constraint firstAttribute="trailing" secondItem="y9M-Zl-oNL" secondAttribute="trailing" constant="49" id="Ry4-83-EXJ"/>
+                                                <constraint firstItem="yP5-SW-HkY" firstAttribute="trailing" secondItem="SC2-y1-GyB" secondAttribute="trailing" id="T4a-hg-e2A"/>
+                                                <constraint firstItem="y9M-Zl-oNL" firstAttribute="top" secondItem="IG7-Am-GWk" secondAttribute="bottom" constant="3" id="WTI-Em-8VU"/>
+                                                <constraint firstItem="yP5-SW-HkY" firstAttribute="centerY" secondItem="WhP-Vx-r8Z" secondAttribute="centerY" id="YT4-xX-aX9"/>
+                                                <constraint firstItem="SC2-y1-GyB" firstAttribute="top" secondItem="y9M-Zl-oNL" secondAttribute="bottom" constant="3" id="dQn-fL-0t3"/>
+                                                <constraint firstItem="SC2-y1-GyB" firstAttribute="leading" secondItem="tFu-jA-DY1" secondAttribute="leading" constant="9" id="wA9-KF-zQg"/>
+                                                <constraint firstItem="IG7-Am-GWk" firstAttribute="leading" secondItem="tFu-jA-DY1" secondAttribute="leading" constant="9" id="zPM-kb-zCR"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tFu-jA-DY1" firstAttribute="leading" secondItem="CZV-SA-4uf" secondAttribute="leadingMargin" constant="17" id="8sd-ub-80N"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tFu-jA-DY1" secondAttribute="trailing" constant="17" id="GEe-6B-a93"/>
+                                        <constraint firstItem="tFu-jA-DY1" firstAttribute="top" secondItem="CZV-SA-4uf" secondAttribute="topMargin" constant="10" id="QSZ-RU-XP7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tFu-jA-DY1" secondAttribute="bottom" constant="10" id="vBG-TA-Zhd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97272259000000005" green="1" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" hint="Contém as informações do medicamento e leva para a tela de edições do medicamento" label="Medicamento">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="medBackground" destination="tFu-jA-DY1" id="fid-zt-z4z"/>
+                                    <outlet property="medCat" destination="SC2-y1-GyB" id="zpN-5d-oAV"/>
+                                    <outlet property="medName" destination="IG7-Am-GWk" id="0Y7-5L-x6a"/>
+                                    <outlet property="medQuant" destination="QM4-eC-TAp" id="vHs-0q-08g"/>
+                                    <outlet property="medVal" destination="zZ2-Ge-H7W" id="l0A-85-SaT"/>
+                                    <outlet property="tomarButton" destination="yP5-SW-HkY" id="qKS-uY-O7F"/>
+                                    <outlet property="tomarLabel" destination="ISd-dV-2Jl" id="0Bg-Or-uuO"/>
+                                    <segue destination="EOH-tV-mdg" kind="show" identifier="edit" id="ByP-Ka-lLe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jMJ-1r-ldi" id="Me4-A3-WFh"/>
+                            <outlet property="delegate" destination="jMJ-1r-ldi" id="ChA-JE-qVJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="goBackMedsTBV" destination="P14-8f-x9b" id="Pdw-C3-3cJ"/>
+                        <outlet property="newMedsTBV" destination="qBc-TU-YHc" id="1i7-pd-f70"/>
+                        <outlet property="search" destination="nkJ-2p-cwh" id="aZF-ul-9Ik"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PIZ-8e-I0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.828125" y="68.521229868228403"/>
+        </scene>
+        <!--Medication View Controller-->
+        <scene sceneID="BR2-SU-v6p">
+            <objects>
+                <viewController storyboardIdentifier="AddMed" id="EOH-tV-mdg" customClass="MedicationViewController" customModule="MyMeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gde-ag-sZA">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0a-Kt-PTp">
+                                <rect key="frame" x="0.0" y="56" width="430" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pi7-r9-IZJ" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="-2" width="113" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWE-On-wKa">
+                                                <rect key="frame" x="27.333333333333339" y="17" width="58.666666666666657" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Volta para a tela onde se encontram os medicamentos" label="Voltar">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="MWE-On-wKa" firstAttribute="centerX" secondItem="Pi7-r9-IZJ" secondAttribute="centerX" id="4IQ-Zn-Rx3"/>
+                                            <constraint firstAttribute="height" constant="54" id="DcQ-u3-RED"/>
+                                            <constraint firstAttribute="width" constant="113" id="Ody-Wt-pfD"/>
+                                            <constraint firstItem="MWE-On-wKa" firstAttribute="centerY" secondItem="Pi7-r9-IZJ" secondAttribute="centerY" id="PyZ-KA-wH1"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="goBackMedicationFunc:" destination="EOH-tV-mdg" eventType="touchUpInside" id="qFv-ND-z8Y"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEV-q9-kVB" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                        <rect key="frame" x="285" y="-2" width="113" height="54"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="folder.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JU3-5O-bnI">
+                                                <rect key="frame" x="43.666666666666686" y="14.666666666666664" width="25.666666666666671" height="25.666666666666671"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Salva o medicamento ou suas alterações" label="Salvar">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="JU3-5O-bnI" firstAttribute="centerY" secondItem="KEV-q9-kVB" secondAttribute="centerY" id="8vU-kj-3vo"/>
+                                            <constraint firstAttribute="height" constant="54" id="RZt-9t-aWr"/>
+                                            <constraint firstItem="JU3-5O-bnI" firstAttribute="centerX" secondItem="KEV-q9-kVB" secondAttribute="centerX" id="pzM-1W-yG8"/>
+                                            <constraint firstAttribute="width" constant="113" id="zz6-Da-fab"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="saveEditMedFunc:" destination="EOH-tV-mdg" eventType="touchUpInside" id="nJl-fF-7Wv"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KEV-q9-kVB" firstAttribute="top" secondItem="o0a-Kt-PTp" secondAttribute="top" constant="-2" id="IR9-iT-Bs1"/>
+                                    <constraint firstItem="Pi7-r9-IZJ" firstAttribute="leading" secondItem="o0a-Kt-PTp" secondAttribute="leading" constant="32" id="Ix3-A8-RO5"/>
+                                    <constraint firstItem="Pi7-r9-IZJ" firstAttribute="top" secondItem="o0a-Kt-PTp" secondAttribute="top" constant="-2" id="VQy-kh-iMT"/>
+                                    <constraint firstAttribute="trailing" secondItem="KEV-q9-kVB" secondAttribute="trailing" constant="32" id="hEF-Sn-HBP"/>
+                                    <constraint firstAttribute="height" constant="50" id="ufs-IR-xYN"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-fx-538">
+                                <rect key="frame" x="15" y="128" width="400" height="659.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="tJa-2V-cRU">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="77.666666666666671"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mSn-ub-ii3">
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="77.666666666666671"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do medicamento" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bMq-AK-k89">
+                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="42.666666666666664"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="Onde se escreve o nome do medicamento"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="send" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkK-1y-mag" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50.666666666666657" width="286" height="27"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="Lista de tipos de remédios para selecionar a que mais se encaixa com o medicamento que esta sendo adicionado" label="Categorias"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                        <menu key="menu" title="Tipo" id="fGl-fI-cU3">
+                                                            <children>
+                                                                <command title="Tipo" id="3we-Jk-tIV"/>
+                                                                <command title="Analgésicos" id="KHs-4F-UYi"/>
+                                                                <command title="Primeiros-Socorros" id="crv-mF-ufq"/>
+                                                                <command title="Anti-Alérgico" id="R8P-cD-SDL"/>
+                                                                <command title="Anti-Inflamatório" id="8Wt-B4-7xH"/>
+                                                                <command title="Anti-Biótico" id="aEd-aI-Rxw"/>
+                                                                <command title="Outro" id="5nv-uX-8YI"/>
+                                                            </children>
+                                                        </menu>
+                                                        <state key="normal" title="Categoria">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dY-TL-Bfr" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                                <rect key="frame" x="320" y="0.0" width="80" height="77.666666666666671"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ByO-dX-tkM">
+                                                        <rect key="frame" x="12.666666666666686" y="13.333333333333332" width="55" height="51.666666666666657"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="55" id="POI-zg-5h9"/>
+                                                            <constraint firstAttribute="height" constant="53.670000000000002" id="swI-Cs-wBe"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Abre uma tela para escanear o código de barras do medicamento" label="Escanear código de barras">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="VUM-ee-qkm"/>
+                                                    <constraint firstAttribute="width" constant="80" id="XK2-TS-0MC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ByO-dX-tkM" secondAttribute="bottom" constant="12" id="hwK-Rx-zBK"/>
+                                                    <constraint firstItem="ByO-dX-tkM" firstAttribute="centerY" secondItem="4dY-TL-Bfr" secondAttribute="centerY" id="m3V-ZH-T3q"/>
+                                                    <constraint firstItem="ByO-dX-tkM" firstAttribute="top" secondItem="4dY-TL-Bfr" secondAttribute="top" constant="12" id="ri2-7H-6uy"/>
+                                                    <constraint firstItem="ByO-dX-tkM" firstAttribute="centerX" secondItem="4dY-TL-Bfr" secondAttribute="centerX" id="vM2-Nj-yof"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="goToScanner:" destination="EOH-tV-mdg" eventType="touchUpInside" id="6gV-Fg-APQ"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A2u-td-Fe3">
+                                        <rect key="frame" x="0.0" y="123" width="400" height="274"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dle-z0-KrJ" customClass="SoftView" customModule="MyMeds" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpu-05-vBF">
+                                                        <rect key="frame" x="159" y="15" width="82.333333333333314" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="8dC-dc-lrX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                        <color key="textColor" red="0.26822733879999999" green="0.44186389450000002" blue="0.65100497010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <accessibility key="accessibilityConfiguration" label="Validade">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstItem="Rpu-05-vBF" firstAttribute="top" secondItem="Dle-z0-KrJ" secondAttribute="top" constant="15" id="R0f-v2-z33"/>
+                                                    <constraint firstItem="Rpu-05-vBF" firstAttribute="centerX" secondItem="Dle-z0-KrJ" secondAttribute="centerX" id="lWE-tm-O78"/>
+                                                    <constraint firstItem="Rpu-05-vBF" firstAttribute="centerY" secondItem="Dle-z0-KrJ" secondAttribute="centerY" id="xX8-4L-jYh"/>
+                                                </constraints>
+                                            </view>
+                                            <datePicker contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-g1-3rp">
+                                                <rect key="frame" x="21.666666666666657" y="58" width="356.66666666666674" height="216"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0u3-g1-3rp" firstAttribute="leading" secondItem="A2u-td-Fe3" secondAttribute="leading" constant="21.666666666666657" id="Fet-Ax-zOC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dle-z0-KrJ" secondAttribute="trailing" id="lCs-aN-tC2"/>
+                                            <constraint firstItem="Dle-z0-KrJ" firstAttribute="leading" secondItem="A2u-td-Fe3" secondAttribute="leading" id="pei-Jc-uGD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zgV-z1-pDb">
+                                        <rect key="frame" x="0.0" y="442.33333333333337" width="400" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7p-bo-7ne" customClass="SoftButton" customModule="MyMeds" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="34"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Lista com tipos de dose para escolher qual se encaixa melhor com o medicamento que esta sendo adicionado" label="Tipo da dose"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                <menu key="menu" id="hw6-Yf-DCn">
+                                                    <children>
+                                                        <command title="Item 1" id="jw8-Ze-4s9" userLabel="Tipo da dose"/>
+                                                        <command title="Item 2" id="tTS-gE-fLK" userLabel="Comprimidos"/>
+                                                        <command title="Item 1" id="nJ1-gK-5L8" userLabel="Ml"/>
+                                                        <command title="Item 2" id="NUi-5c-qbo" userLabel="Usos"/>
+                                                        <command title="Item 1" id="mvf-bU-leB" userLabel="Unidades"/>
+                                                        <command title="Item 2" id="Pvg-NA-m57" userLabel="Cápsulas"/>
+                                                        <command title="Item 2" id="2h0-8s-izy" userLabel="Outro"/>
+                                                    </children>
+                                                </menu>
+                                                <state key="normal" title="Dose">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Qnt. Atual" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aDq-C3-qBO">
+                                                <rect key="frame" x="138.33333333333334" y="0.0" width="123.33333333333334" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Onde se escreve a quantidade atual do medicamento"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickOnTextField:" destination="EOH-tV-mdg" eventType="editingDidBegin" id="sUC-qX-x9n"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Qnt. Máxima" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-eL-Wp1">
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="123.33333333333331" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Onde se escreve a quantidade máxima do medicamento"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickOnTextField:" destination="EOH-tV-mdg" eventType="editingDidBegin" id="KgM-Vh-xhM"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-T1-TKI">
+                                        <rect key="frame" x="0.0" y="521.66666666666663" width="400" height="138"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aRb-pc-eKD">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="138"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua descrição aqui" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-Wo-MLA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="Onde se escreve a sua descrição do medicamento"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="clickOnTextField:" destination="EOH-tV-mdg" eventType="editingDidBegin" id="V22-y2-SZI"/>
+                                                            <action selector="escrevendoFunc:" destination="EOH-tV-mdg" eventType="editingChanged" id="U08-ms-4Df"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlW-bl-VhQ" customClass="SoftView" customModule="MyMeds" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="42" width="400" height="96"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua descrição aparecerá aqui" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="F0r-EU-p3u">
+                                                                <rect key="frame" x="8" y="33" width="384" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="v0p-pQ-gFY"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.96550043910539074" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="Onde aparecerá a descrição do medicamento" label="Descrição">
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
+                                                        <constraints>
+                                                            <constraint firstItem="F0r-EU-p3u" firstAttribute="trailing" secondItem="ZlW-bl-VhQ" secondAttribute="trailingMargin" id="8jS-dE-BS7"/>
+                                                            <constraint firstItem="F0r-EU-p3u" firstAttribute="centerY" secondItem="ZlW-bl-VhQ" secondAttribute="centerY" id="V5J-iA-eYR"/>
+                                                            <constraint firstItem="F0r-EU-p3u" firstAttribute="leading" secondItem="ZlW-bl-VhQ" secondAttribute="leadingMargin" id="Yaf-3T-wZ5"/>
+                                                            <constraint firstItem="F0r-EU-p3u" firstAttribute="top" secondItem="ZlW-bl-VhQ" secondAttribute="top" constant="33" id="hGu-OQ-315"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ZlW-bl-VhQ" firstAttribute="top" secondItem="kmI-Wo-MLA" secondAttribute="bottom" constant="8" symbolic="YES" id="BB2-Fb-AAA"/>
+                                                    <constraint firstItem="ZlW-bl-VhQ" firstAttribute="width" secondItem="aRb-pc-eKD" secondAttribute="width" id="JCe-pL-QbN"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tJa-2V-cRU" firstAttribute="top" secondItem="MBe-fx-538" secondAttribute="top" id="0BF-nW-dSl"/>
+                                    <constraint firstItem="A2u-td-Fe3" firstAttribute="leading" secondItem="MBe-fx-538" secondAttribute="leading" id="3xx-BN-dMA"/>
+                                    <constraint firstItem="zgV-z1-pDb" firstAttribute="leading" secondItem="MBe-fx-538" secondAttribute="leading" id="5b2-VP-5PH"/>
+                                    <constraint firstItem="tJa-2V-cRU" firstAttribute="leading" secondItem="MBe-fx-538" secondAttribute="leading" id="Cle-dM-W33"/>
+                                    <constraint firstAttribute="trailing" secondItem="tJa-2V-cRU" secondAttribute="trailing" id="P6c-CH-dnX"/>
+                                    <constraint firstItem="OIB-T1-TKI" firstAttribute="leading" secondItem="MBe-fx-538" secondAttribute="leading" id="XZr-ag-gJA"/>
+                                    <constraint firstAttribute="trailing" secondItem="A2u-td-Fe3" secondAttribute="trailing" id="bk3-1M-8zy"/>
+                                    <constraint firstAttribute="trailing" secondItem="OIB-T1-TKI" secondAttribute="trailing" id="d0w-as-xkq"/>
+                                    <constraint firstAttribute="trailing" secondItem="zgV-z1-pDb" secondAttribute="trailing" id="m2I-VO-SAg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KuB-GK-HjO"/>
+                        <color key="backgroundColor" red="0.97272259000000005" green="1" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="o0a-Kt-PTp" firstAttribute="top" secondItem="gde-ag-sZA" secondAttribute="top" constant="56" id="E0O-rx-t2j"/>
+                            <constraint firstItem="o0a-Kt-PTp" firstAttribute="leading" secondItem="KuB-GK-HjO" secondAttribute="leading" id="IMN-5k-bQM"/>
+                            <constraint firstAttribute="trailing" secondItem="MBe-fx-538" secondAttribute="trailing" constant="15" id="PYz-7U-dy3"/>
+                            <constraint firstAttribute="bottom" secondItem="MBe-fx-538" secondAttribute="bottom" constant="75.329999999999998" id="VcZ-PU-Lat"/>
+                            <constraint firstAttribute="trailing" secondItem="o0a-Kt-PTp" secondAttribute="trailing" id="ehS-Dw-xzO"/>
+                            <constraint firstItem="MBe-fx-538" firstAttribute="top" secondItem="o0a-Kt-PTp" secondAttribute="bottom" constant="22" id="h0S-F5-mvc"/>
+                            <constraint firstItem="MBe-fx-538" firstAttribute="leading" secondItem="gde-ag-sZA" secondAttribute="leading" constant="15" id="hE6-LP-FLj"/>
+                            <constraint firstItem="o0a-Kt-PTp" firstAttribute="centerX" secondItem="gde-ag-sZA" secondAttribute="centerX" id="kUu-cJ-0ri"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="weo-E6-VKm">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="pjF-tQ-WdS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Izy-Fr-rxG">
+                                <rect key="frame" x="313" y="5" width="95" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Salvar"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="MedNameField" destination="bMq-AK-k89" id="ehG-x6-cMM"/>
+                        <outlet property="categorias" destination="tkK-1y-mag" id="LL1-Ku-9KJ"/>
+                        <outlet property="descricaoLabel" destination="F0r-EU-p3u" id="30T-o7-YZI"/>
+                        <outlet property="descricaoTextField" destination="kmI-Wo-MLA" id="JLg-WO-j0i"/>
+                        <outlet property="descriptionView" destination="ZlW-bl-VhQ" id="3oV-hy-4ZV"/>
+                        <outlet property="doseTipo" destination="Y7p-bo-7ne" id="503-Es-vj1"/>
+                        <outlet property="goBackMedication" destination="Pi7-r9-IZJ" id="qkD-L7-WYa"/>
+                        <outlet property="quantidadeAtual" destination="aDq-C3-qBO" id="9FU-kn-vgH"/>
+                        <outlet property="quantidadeMax" destination="ssh-eL-Wp1" id="Ze9-0Y-8eC"/>
+                        <outlet property="saveEditMed" destination="KEV-q9-kVB" id="b3B-dF-6Dj"/>
+                        <outlet property="scanCode" destination="4dY-TL-Bfr" id="zwp-Zu-Yr5"/>
+                        <outlet property="validationDate" destination="0u3-g1-3rp" id="qeO-Mc-3TP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Udf-6W-ioB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2220" y="67.241379310344826"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="folder.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus.square.on.square" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
